@@ -29,7 +29,8 @@ router.get('/search/:price/:location', (req, res) => {
                 rating: firstResult.rating,
                 location: firstResult.location.display_address,
                 display_phone: firstResult.display_phone,
-                coordinates: firstResult.coordinates
+                coordinates: firstResult.coordinates,
+                transactions: firstResult.transactions
             })
         })
         .catch(e => {
