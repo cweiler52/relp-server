@@ -15,12 +15,12 @@ router.get('/search/:price/:location', (req, res) => {
     };
 
     const client = yelp.client(apiKey);
-
     client.search(searchRequest)
         .then(response => {
-            const firstResult = response.jsonBody.businesses;
+            const randomNum = Math.floor(Math.random() * (response.jsonBody.businesses.length - 1));
+            const firstResult = response.jsonBody.businesses[randomNum];
             const prettyJson = JSON.stringify(firstResult, null, 4);
-            console.log(prettyJson);
+            // console.log(prettyJson);
             res.status(200).json(firstResult)
         })
         .catch(e => {
