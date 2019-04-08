@@ -4,7 +4,7 @@ const express  = require('express');
 const router = express.Router();
 const yelp = require('yelp-fusion');
 
-/* ALLOWS A NEW USER TO BE CREATED WITH A USERNAME & PASSWORD */
+/* ALLOWS A USER TO SEARCH FOR A RESTRAUNT BASED ON PRICE AND LOCATION  */
 router.get('/search/:price/:location', (req, res) => {
     const apiKey = 'SXdv90p3vyM9218pmgmFn4Dc-rN09Oxm09pWzgFtdRdo6LIaZqxaRH3WnSyGlPRXeKdVAtL601SPJj85oxRdsI4pqjRl7T6cWTMCs9ogXyc5pG6eaWq1AbjGCtWbXHYx';
 
